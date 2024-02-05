@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bing</title>
+    <script src="https://kit.fontawesome.com/e88423540b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <img src="1280px-Microsoft_Bing_logo.svg.png"">
+
+        </ul>
+    </nav>
+<div class="input-field">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input id="input" placeholder="Websuche" type="text">
+  <img class="copilot" src="Bildschirmfoto_2024-02-03_um_19.13.27-removebg-preview.png" alt="">
+  <div class="message">
+  <p>Hello!</p>
+</div>
+</div>
+<div class="Image-box"></div>
+
+
+    <script>
+        let copilot = document.querySelector('.copilot');
+let message = document.querySelector('.message')
+let input = document.getElementById("input");
+let button = document.querySelector('.fa-magnifying-glass')
+
+button.addEventListener("click",function enter(){
+  window.location.href="https://www.bing.com/search?q="+input.value+"&filters=ufn%3a%22Starship%22+sid%3a%223e3879e2-aec3-d7ac-c950-6d9906c4b8ac%22&asbe=HS&qs=MB&pq=sta&sc=10-3&cvid=141468FBA7B34B878B0EAB0CCB956C90&FORM=QBLH&sp=1&ghc=1&lq=0";
+})
+
+        copilot.addEventListener("click",function(){
+            message.classList.toggle('active');
+        })
+
+    </script>
+</body>
+</html>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+
+    @keyframes popup{
+        from{
+opacity: 0;
+        }
+
+        to{
+opacity: 1;
+        }
+    }
+
+    body{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        background-image: url(Bildschirmfoto\ 2024-02-03\ um\ 18.57.31.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        animation: popup 1s;
+        overflow: hidden;
+    }
+
+    .input-field{
+        width: 650px;
+        background: #fff;
+        margin-top: 220px;
+        height: 60px;
+        border-radius: 50px;
+        transition: 0.3s;
+    }
+
+    .input-field input{
+        
+        width: 500px;
+        height: 50px;
+        border-radius: 50px;
+        border: 0;
+        outline: 0;
+        padding: 10px;
+        font-size: 20px;
+        margin-left: 5px;
+        position: absolute;
+        top: 225px;
+        
+    }
+
+    .input-field i{
+        font-size: 30px;
+        margin: 16px;
+       
+    }
+
+.copilot{
+    width: 55px;
+    height: 55px;
+    float: right;
+    margin: 0px;
+    background: #f6efef;
+    border-radius: 50%;
+    
+}
+
+
+.message{
+    margin-left: 660px;
+    position: absolute;
+    top: 230px;
+    background: #ffffff;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px 10px 10px 0px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.message.active{
+    opacity: 1;
+}
+
+nav img{
+    width: 240px;
+    height: 40px;
+    margin: 20px;
+    position: absolute;
+ left: 50px;
+}
+   
+.Image-box{
+    width: 704px;
+    height: 400px;
+    background: #000;
+    position: absolute;
+    top: 400px;
+    border-radius: 20px;
+    background-image: url(Bing-AI.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow:4px 4px 8px 8px rgba(0, 0, 0, 0.364);
+}
+
+@media only screen and (max-width: 700px) {
+    .Image-box{
+        width: 204px;
+    height: 200px;
+    }
+
+
+    .input-field input{
+        
+        width: 210px;
+        height: 50px;
+        
+        
+    }
+}
+
+.input-field:hover{
+    box-shadow:4px 4px 8px 8px rgba(0, 0, 0, 0.364);
+   
+}
+
+</style>
